@@ -11,7 +11,7 @@ import {useParams} from 'react-router-dom'
 
 import {useDispatch, useSelector } from 'react-redux'
 import { useAlert } from 'react-alert';
-import {getProducts } from '../actions/___productActions___'
+import {getProducts } from '../actions/productActions'
 
 const { createSliderWithTooltip } = Slider;
 const Range = createSliderWithTooltip(Slider.Range)

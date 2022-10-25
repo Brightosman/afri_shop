@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
 const validator = require('validator');
+const mongoose = require('mongoose');
 
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken')
@@ -64,9 +64,9 @@ userSchema.methods.comparePassword = async function (enteredPassword) {
 userSchema.methods.getJwtToken = function () {
     return jwt.sign({ id: this._id }, process.env.JWT_SECRET, {
         expiresIn: process.env.JWT_EXPIRES_TIME
+
     });
 }
-
 // Generate password reset token
 userSchema.methods.getResetPasswordToken = function () {
     // Generate token
