@@ -148,7 +148,7 @@ const ProductDetails = () => {
 
                 <hr />
                 
-                <p id="product_price">${product.price}</p>
+                <p id="product_price">€{product.price}</p>
                 <div className="stockCounter d-inline">
                     <span className="btn btn-danger minus" onClick={decreaseQty}>-</span>
 
@@ -156,7 +156,7 @@ const ProductDetails = () => {
 
                     <span className="btn btn-primary plus" onClick={increaseQty}>+</span>
                 </div>
-                <button type="button" id="cart_btn" className="btn btn-primary d-inline ml-4" disabled={product.stock === 0} onClick={addToCart}>Add to Cart</button>
+                <button type="button" id="cart_btn" className="btn btn-primary d-inline ml-4" disabled={product.stock === 0} onClick={addToCart}>Ajouter au panier</button>
 
                 <hr />
 
@@ -172,10 +172,10 @@ const ProductDetails = () => {
 
                 {user ? <button type="button" id="review_btn" className="btn btn-primary mt-4" 
                             data-toggle="modal" data_target="#ratingModal" onClick={setUserRatings}> 
-                            Submit Your Review
+                            Postez votre avis
                         </button> 
                         : 
-                        <div className="alert alert-danger mt-5" type="alert">Login to post review.</div>
+                        <div className="alert alert-danger mt-5" type="alert">Connectez-vous pour publier un avis.</div>
                 }
                 <div className="row mt-2 mb-5">
                     <div className="rating w-50">
@@ -184,7 +184,7 @@ const ProductDetails = () => {
                             <div className="modal-dialog" role="document">
                                 <div className="modal-content">
                                     <div className="modal-header">
-                                        <h5 className="modal-title" id="ratingModalLabel">Submit Review</h5>
+                                        <h5 className="modal-title" id="ratingModalLabel">Postez votre avis</h5>
                                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import {createRoot} from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -16,21 +16,38 @@ const options = {
   transition: transitions.SCALE
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const container = document.getElementById('root');
+const root = createRoot(container);
+
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <AlertProvider template={AlertTemplate} {...options}>
-        <App />
-      </AlertProvider>
-    </Provider>
+  <Provider store={store}>
+     <AlertProvider template={AlertTemplate} {...options}>
+       <App />
+     </AlertProvider>
+     
+    </Provider>,
+
     
-  </React.StrictMode>
-);
+)
+
+//   const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <Provider store={store}>
+//       <AlertProvider template={AlertTemplate} {...options}>
+//         <App />
+//       </AlertProvider>
+//     </Provider>
+    
+//   </React.StrictMode>
+// );
 
 // ReactDOM.render(
 //    <Provider store={store}>
-//      <App />
+//     <AlertProvider template={AlertTemplate} {...options}>
+//       <App />
+//     </AlertProvider>
+     
 //    </Provider>,
 //    document.getElementById('root')
 //    );

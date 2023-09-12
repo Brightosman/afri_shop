@@ -51,7 +51,7 @@ const Login = () => {
                     <div className="row wrapper">
                         <div className="col-10 col-lg-5">
                             <form className="shadow-lg" onSubmit={submitHandler}>
-                                <h1 className="mb-3">Login</h1>
+                                <h1 className="mb-3">Connexion</h1>
                                 <div className="form-group">
                                     <label htmlFor="email_field">Email</label>
                                     <input
@@ -64,7 +64,7 @@ const Login = () => {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="password_field">Password</label>
+                                    <label htmlFor="password_field">Mot de passe </label>
                                     <input
                                         type="password"
                                         id="password_field"
@@ -74,17 +74,17 @@ const Login = () => {
                                     />
                                 </div>
 
-                                <Link to="/password/forgot" className="float-right mb-4">Forgot Password?</Link>
+                                <Link to="/password/forgot" className="float-right mb-4">Mot de passe oublié?</Link>
 
                                 <button
                                     id="login_button"
                                     type="submit"
                                     className="btn btn-block py-3"
                                 >
-                                    LOGIN
+                                    Connexion
                                 </button>
 
-                                <Link to="/register" className="float-right mt-3">New User?</Link>
+                                <Link to="/register" className="float-right mt-3">Nouvel utilisateur?</Link>
                             </form>
                         </div>
                     </div>

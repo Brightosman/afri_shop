@@ -37,7 +37,7 @@ const Header = () => {
 
             <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
                <Link to ="/cart" style={{ textDecoration: 'none' }}>
-                    <span id="cart" className="ml-3">Cart</span>
+                    <span id="cart" className="ml-3">Paniers</span>
                     <span className="ml-1" id="cart_count">{cartItems.length}</span>
                </Link>
                { user ? (
@@ -68,7 +68,7 @@ const Header = () => {
                             <Link className="dropdown-item text-danger" to="/" onClick={logoutHandler}>Logout</Link>
                         </div>
                     </div>
-               ) : !loading && <Link to="/login" className="btn ml-4" id="login_btn">Login</Link>
+               ) : !loading && <Link to="/login" className="btn ml-4" id="login_btn">Connexion</Link>
                }
             </div>
         </nav>

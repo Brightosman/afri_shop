@@ -33,16 +33,16 @@ const Shipping = () => {
     return (
         <Fragment>
 
-            <MetaData title={'Shipping Info'} />
+            <MetaData title={'Les détails d\'expédition'} />
 
             <CheckoutSteps shipping />
 
             <div className="row wrapper">
                 <div className="col-10 col-lg-5">
                     <form className="shadow-lg" onSubmit={submitHandler}>
-                        <h1 className="mb-4">Shipping Info</h1>
+                        <h1 className="mb-4">Les Détails d'Expédition</h1>
                         <div className="form-group">
-                            <label htmlFor="address_field">Address</label>
+                            <label htmlFor="address_field">Adresse</label>
                             <input
                                 type="text"
                                 id="address_field"
@@ -54,7 +54,7 @@ const Shipping = () => {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="city_field">City</label>
+                            <label htmlFor="city_field">Ville</label>
                             <input
                                 type="text"
                                 id="city_field"
@@ -66,7 +66,7 @@ const Shipping = () => {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="phone_field">Phone No</label>
+                            <label htmlFor="phone_field">Numéro de téléphone</label>
                             <input
                                 type="phone"
                                 id="phone_field"
@@ -78,7 +78,7 @@ const Shipping = () => {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="postal_code_field">Postal Code</label>
+                            <label htmlFor="postal_code_field">Code Postal</label>
                             <input
                                 type="number"
                                 id="postal_code_field"
@@ -90,7 +90,7 @@ const Shipping = () => {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="country_field">Country</label>
+                            <label htmlFor="country_field">Pays</label>
                             <select
                                 id="country_field"
                                 className="form-control"
@@ -113,7 +113,7 @@ const Shipping = () => {
                             type="submit"
                             className="btn btn-block py-3"
                         >
-                            CONTINUE
+                            CONTINUEZ
                             </button>
                     </form>
                 </div>

@@ -49,17 +49,17 @@ const OrdersList = () => {
                     sort: 'asc'
                 },
                 {
-                    label: 'No of Items',
+                    label: 'Nombre de produits',
                     field: 'numofItems',
                     sort: 'asc'
                 },
                 {
-                    label: 'Amount',
+                    label: 'Somme ',
                     field: 'amount',
                     sort: 'asc'
                 },
                 {
-                    label: 'Status',
+                    label: 'Statut',
                     field: 'status',
                     sort: 'asc'
                 },
@@ -75,7 +75,7 @@ const OrdersList = () => {
             data.rows.push({
                 id: order._id,
                 numofItems: order.orderItems.length,
-                amount: `$${order.totalPrice}`,
+                amount: `€${order.totalPrice}`,
                 status: order.orderStatus && String(order.orderStatus).includes('Delivered')
                     ? <p style={{ color: 'green' }}>{order.orderStatus}</p>
                     : <p style={{ color: 'red' }}>{order.orderStatus}</p>,
@@ -96,7 +96,7 @@ const OrdersList = () => {
 
     return (
         <Fragment>
-            <MetaData title={'All Orders'} />
+            <MetaData title={'Toutes les commandes'} />
             <div className="row">
                 <div className="col-12 col-md-2">
                     <Sidebar />
@@ -104,7 +104,7 @@ const OrdersList = () => {
 
                 <div className="col-12 col-md-10">
                     <Fragment>
-                        <h1 className="my-5">All Orders</h1>
+                        <h1 className="my-5">Toutes les commandes</h1>
 
                         {loading ? <Loader /> : (
                             <MDBDataTable

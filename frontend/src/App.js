@@ -104,15 +104,16 @@ function App() {
             <Route path="/admin/users" isAdmin={ true } element={ <ProtectedRoute> <UsersList /> </ProtectedRoute> } />  
             <Route path="/admin/user/:id" isAdmin={ true } element={ <ProtectedRoute> <UpdateUser /> </ProtectedRoute> } />
             <Route path="/admin/reviews" isAdmin={ true } element={ <ProtectedRoute> <ProductReviews /> </ProtectedRoute> } />
+
+             
+            
+            
             
           </Routes>
         </div>
         
-
-        { !loading && user.role !== 'admin' && (
-          <Footer />
-        )}
-        
+       
+        <Footer />
       </div>
     </Router>
   );

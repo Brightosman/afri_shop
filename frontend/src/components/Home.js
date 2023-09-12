@@ -34,7 +34,9 @@ const Home = () => {
         'Beauty/Health',
         'Sports',
         'Outdoor',
-        'Home'
+        'Home',
+        'Lait', 'Sucre',
+        'Assaisonnement'
     ]
 
   const alert = useAlert();
@@ -66,7 +68,7 @@ const Home = () => {
     {loading ? <Loader/>:(
       <Fragment>
       <MetaData title={"Buy Best Products Online"}/>
-        <h1 id="products_heading">Latest Products</h1>
+        <h1 id="products_heading">Nos Produits</h1>
 
         <section id="products" className="container mt-5">
             <div className="row">

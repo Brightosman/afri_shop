@@ -132,9 +132,9 @@ const Payment = () => {
             <div className="row wrapper">
                 <div className="col-10 col-lg-5">
                     <form className="shadow-lg" onSubmit={submitHandler}>
-                        <h1 className="mb-4">Card Info</h1>
+                        <h1 className="mb-4">Détails de la Carte</h1>
                         <div className="form-group">
-                            <label htmlFor="card_num_field">Card Number</label>
+                            <label htmlFor="card_num_field">Numéro de Carte Bancaire</label>
                             <CardNumberElement
                                 type="text"
                                 id="card_num_field"
@@ -144,7 +144,7 @@ const Payment = () => {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="card_exp_field">Card Expiry</label>
+                            <label htmlFor="card_exp_field">Expiration de la Carte</label>
                             <CardExpiryElement
                                 type="text"
                                 id="card_exp_field"
@@ -154,7 +154,7 @@ const Payment = () => {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="card_cvc_field">Card CVC</label>
+                            <label htmlFor="card_cvc_field">CVC</label>
                             <CardCvcElement
                                 type="text"
                                 id="card_cvc_field"
@@ -169,7 +169,7 @@ const Payment = () => {
                             type="submit"
                             className="btn btn-block py-3"
                         >
-                            Pay {` - ${orderInfo && orderInfo.totalPrice}`}
+                            Payer  {` €${orderInfo && orderInfo.totalPrice}`}
                         </button>
 
                     </form>

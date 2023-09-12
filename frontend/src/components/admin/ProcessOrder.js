@@ -70,25 +70,25 @@ const ProcessOrder = () => {
                                     <h2 className="my-5">Order # {order._id}</h2>
 
                                     <h4 className="mb-4">Shipping Info</h4>
-                                    <p><b>Name:</b> {user && user.name}</p>
-                                    <p><b>Phone:</b> {shippingInfo && shippingInfo.phoneNo}</p>
-                                    <p className="mb-4"><b>Address:</b>{shippingDetails}</p>
-                                    <p><b>Amount:</b> ${totalPrice}</p>
+                                    <p><b>Prénom et Nom:</b> {user && user.name}</p>
+                                    <p><b>téléphone:</b> {shippingInfo && shippingInfo.phoneNo}</p>
+                                    <p className="mb-4"><b>Adresse:</b>{shippingDetails}</p>
+                                    <p><b>Montant:</b> €{totalPrice}</p>
 
                                     <hr />
 
-                                    <h4 className="my-4">Payment</h4>
-                                    <p className={isPaid ? "greenColor" : "redColor"}><b>{isPaid ? "PAID" : "NOT PAID"}</b></p>
+                                    <h4 className="my-4">Paiement</h4>
+                                    <p className={isPaid ? "greenColor" : "redColor"}><b>{isPaid ? "PAYÉ" : "IMPAYÉ"}</b></p>
 
                                     <h4 className="my-4">Stripe ID</h4>
                                     <p><b>{paymentInfo && paymentInfo.id}</b></p>
 
-                                    <h4 className="my-4">Order Status:</h4>
+                                    <h4 className="my-4">Statut de la Commande:</h4>
                                     <p className={order.orderStatus && String(order.orderStatus).includes('Delivered') ? "greenColor" : "redColor"} ><b>{orderStatus}</b></p>
 
 
 
-                                    <h4 className="my-4">Order Items:</h4>
+                                    <h4 className="my-4">Items Commandés:</h4>
 
                                     <hr />
                                     <div className="cart-item my-1">
@@ -104,7 +104,7 @@ const ProcessOrder = () => {
 
 
                                                 <div className="col-4 col-lg-2 mt-4 mt-lg-0">
-                                                    <p>${item.price}</p>
+                                                    <p>€{item.price}</p>
                                                 </div>
 
                                                 <div className="col-4 col-lg-3 mt-4 mt-lg-0">
@@ -117,7 +117,7 @@ const ProcessOrder = () => {
                                 </div>
 
                                 <div className="col-12 col-lg-3 mt-5">
-                                    <h4 className="my-4">Status</h4>
+                                    <h4 className="my-4">Statut</h4>
 
                                     <div className="form-group">
                                         <select
@@ -126,14 +126,14 @@ const ProcessOrder = () => {
                                             value={status}
                                             onChange={(e) => setStatus(e.target.value)}
                                         >
-                                            <option value="Processing">Processing</option>
-                                            <option value="Shipped">Shipped</option>
-                                            <option value="Delivered">Delivered</option>
+                                            <option value="Processing">Traitement</option>
+                                            <option value="Shipped">Expédié</option>
+                                            <option value="Delivered">Livré</option>
                                         </select>
                                     </div>
 
                                     <button className="btn btn-primary btn-block" onClick={() => updateOrderHandler(order._id)}>
-                                        Update Status
+                                        Mettre à jour le statut de la commande
                                     </button>
                                 </div>
 

@@ -34,7 +34,9 @@ const UpdateProduct = ({ match}) => {
         'Beauty/Health',
         'Sports',
         'Outdoor',
-        'Home'
+        'Home',
+        'Lait', 'Sucre',
+        'Assaisonnement'
     ]
 
     const alert = useAlert();

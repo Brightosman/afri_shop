@@ -33,7 +33,9 @@ const NewProduct = () => {
         'Beauty/Health',
         'Sports',
         'Outdoor',
-        'Home'
+        'Home',
+        'Lait', 'Sucre',
+        'Assaisonnement'
     ]
 
     const alert = useAlert();

@@ -49,7 +49,7 @@ const UsersList = () => {
                     sort: 'asc'
                 },
                 {
-                    label: 'Name',
+                    label: 'Nom et Prénom',
                     field: 'name',
                     sort: 'asc'
                 },
@@ -59,7 +59,7 @@ const UsersList = () => {
                     sort: 'asc'
                 },
                 {
-                    label: 'Role',
+                    label: 'Rôle',
                     field: 'role',
                     sort: 'asc'
                 },
@@ -95,7 +95,7 @@ const UsersList = () => {
 
     return (
         <Fragment>
-            <MetaData title={'All Users'} />
+            <MetaData title={'Tous les utilisateurs'} />
             <div className="row">
                 <div className="col-12 col-md-2">
                     <Sidebar />
@@ -103,7 +103,7 @@ const UsersList = () => {
 
                 <div className="col-12 col-md-10">
                     <Fragment>
-                        <h1 className="my-5">All Users</h1>
+                        <h1 className="my-5">Tous Les Utilisateurs</h1>
 
                         {loading ? <Loader /> : (
                             <MDBDataTable
